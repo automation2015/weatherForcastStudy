@@ -1,4 +1,4 @@
-package cn.auto.weatherforcaststudy;
+package cn.auto.weatherforcaststudy.base;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;

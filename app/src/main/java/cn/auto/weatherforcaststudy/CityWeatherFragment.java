@@ -18,6 +18,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 import androidx.fragment.app.Fragment;
+import cn.auto.weatherforcaststudy.base.BaseFragment;
 import cn.auto.weatherforcaststudy.bean.WeatherBean;
 import cn.auto.weatherforcaststudy.db.DBManager;
 import cn.auto.weatherforcaststudy.utils.Constanse;

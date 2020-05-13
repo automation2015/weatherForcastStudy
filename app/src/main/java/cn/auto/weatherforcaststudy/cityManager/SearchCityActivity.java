@@ -80,12 +80,10 @@ public class SearchCityActivity extends BaseActivity implements View.OnClickList
             intent.putExtra("city", city);
             startActivity(intent);
 
-
         } else {
             Toast.makeText(this, "暂未收录该城市天气信息", Toast.LENGTH_LONG).show();
         }
     }
-
     private void setListeners() {
         searchGv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

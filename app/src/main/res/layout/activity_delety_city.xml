@@ -8,18 +8,18 @@
         android:layout_height="60dp"
         android:id="@+id/delete_top_layout">
         <ImageView
-            android:id="@+id/delete_iv_error"
+            android:id="@+id/delete_iv_back"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@mipmap/icon_error"
+            android:src="@mipmap/icon_back"
             android:layout_marginLeft="5dp"/>
-        <ImageView
+        <!--<ImageView
             android:id="@+id/delete_iv_right"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@mipmap/icon_right"
             android:layout_marginRight="5dp"
-            android:layout_alignParentRight="true"/>
+            android:layout_alignParentRight="true"/>-->
         <TextView
            android:id="@+id/delete_tv_title"
             android:layout_width="wrap_content"

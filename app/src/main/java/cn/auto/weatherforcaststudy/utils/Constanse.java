@@ -9,4 +9,5 @@ public class Constanse {
     public static final String DB_COLUMN_CONTENT="content";
     public static final  String URL1 = "http://api.map.baidu.com/telematics/v3/weather?location=";
     public static final String URL2 = "&output=json&ak=FkPhtMBK0HTIQNh7gG4cNUttSTyr0nzo";
+
 }

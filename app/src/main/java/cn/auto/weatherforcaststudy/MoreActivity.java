@@ -13,21 +13,23 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MoreActivity extends AppCompatActivity implements View.OnClickListener {
-    private TextView tvShare, tvCache, tvBg,tvVersion;
+    private TextView tvShare, tvCache, tvBg, tvVersion, tvDefCity;
     private RadioGroup rgExBg;
     private ImageView ivBack;
     private DBHelper helper;
     private SQLiteDatabase db;
     private SharedPreferences pref;
-
+   private SharedPreferences.Editor editor;
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -41,10 +43,27 @@ public class MoreActivity extends AppCompatActivity implements View.OnClickListe
         initViews();
         tvVersion.setText("当前版本号：   V " + getVersionName());
         setRgListrner();
-
     }
-
-
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.more_tv_exchange:
+                if (rgExBg.getVisibility() == View.GONE) {
+                    rgExBg.setVisibility(View.VISIBLE);
+                } else {
+                    rgExBg.setVisibility(View.GONE);
+                }
+                break;
+            case R.id.more_iv_back:
+                finish();
+                break;
+            case R.id.more_tv_cache:
+                clearCache();
+                break;
+            case R.id.more_tv_share:
+                shareSoftwareMsg("老天爷情绪预测软件是一款精准的情绪预测软件，进而情绪管理的高级软件，快快下载吧！");
+       }
+    }
     private String getVersionName() {
         /*获取应用的版本名称*/
         PackageManager manager = getPackageManager();
@@ -64,7 +83,7 @@ public class MoreActivity extends AppCompatActivity implements View.OnClickListe
             public void onCheckedChanged(RadioGroup group, int checkedId) {
 //                获取目前的默认壁纸
                 int bg = pref.getInt("bg", 0);
-                SharedPreferences.Editor editor = pref.edit();
+
                 Intent intent = new Intent(MoreActivity.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 switch (checkedId) {
@@ -101,10 +120,11 @@ public class MoreActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void initViews() {
-        tvBg=findViewById(R.id.more_tv_exchange);
+        tvBg = findViewById(R.id.more_tv_exchange);
         tvCache = findViewById(R.id.more_tv_cache);
         tvShare = findViewById(R.id.more_tv_share);
         tvVersion = findViewById(R.id.more_tv_version);
+        tvDefCity = findViewById(R.id.more_tv_def_city);
         rgExBg = findViewById(R.id.more_rg);
         ivBack = findViewById(R.id.more_iv_back);
         helper = DBManager.getInstance(this);
@@ -115,32 +135,11 @@ public class MoreActivity extends AppCompatActivity implements View.OnClickListe
         tvShare.setOnClickListener(this);
         rgExBg.setOnClickListener(this);
         ivBack.setOnClickListener(this);
+        tvDefCity.setOnClickListener(this);
+        editor= pref.edit();
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.more_tv_exchange:
-                if(rgExBg.getVisibility() == View.GONE){
-                    rgExBg.setVisibility(View.VISIBLE);
-                }else {
-                    rgExBg.setVisibility(View.GONE);
-                }
-                break;
-            case R.id.more_iv_back:
-                finish();
-                break;
-            case R.id.more_tv_cache:
-                clearCache();
 
-                break;
-            case R.id.more_tv_share:
-                shareSoftwareMsg("老天爷情绪预测软件是一款精准的情绪预测软件，进而情绪管理的高级软件，快快下载吧！");
-                break;
-
-
-        }
-    }
 
     private void shareSoftwareMsg(String s) {
         /*分享软件的函数*/

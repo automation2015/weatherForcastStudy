@@ -37,14 +37,14 @@
     <TextView
         android:id="@+id/more_tv_version"
         style="@style/moreText"
-        android:drawableLeft="@mipmap/more_bg"
+        android:drawableLeft="@mipmap/more_version"
         android:text="当前版本" />
     <ImageView
         style="@style/moreImageView" />
     <TextView
         android:id="@+id/more_tv_cache"
         style="@style/moreText"
-        android:drawableLeft="@mipmap/more_version"
+        android:drawableLeft="@mipmap/more_cache"
         android:text="清除缓存" />
 
     <ImageView
@@ -59,7 +59,7 @@
     <TextView
         android:id="@+id/more_tv_exchange"
         style="@style/moreText"
-        android:drawableLeft="@mipmap/more_cache"
+        android:drawableLeft="@mipmap/more_bg"
         android:text="改变壁纸" />
     <RadioGroup
         android:id="@+id/more_rg"

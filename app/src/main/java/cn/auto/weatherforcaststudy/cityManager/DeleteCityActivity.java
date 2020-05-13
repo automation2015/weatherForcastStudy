@@ -7,7 +7,6 @@ import cn.auto.weatherforcaststudy.adapters.DeleteCityAdapter;
 import cn.auto.weatherforcaststudy.db.DBHelper;
 import cn.auto.weatherforcaststudy.db.DBManager;
 import cn.auto.weatherforcaststudy.utils.Constanse;
-
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -22,13 +21,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DeleteCityActivity extends AppCompatActivity implements View.OnClickListener{
-private ImageView errorIv, rightIv;
+private ImageView ivBack;
 private ListView deleteLv;
 private List<String> mDatas;//listView的数据源
-    private List<String> deleteCitys;//表示存储了删除的城市信息
-    private DeleteCityAdapter adapter;
-    private DBHelper helper;
-    private SQLiteDatabase db;
+private List<String> deleteCitys;//表示存储了删除的城市信息
+private DeleteCityAdapter adapter;
+private DBHelper helper;
+private SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,22 +45,20 @@ private List<String> mDatas;//listView的数据源
     }
 
     private void initViews() {
-        errorIv=findViewById(R.id.delete_iv_error);
-        rightIv =findViewById(R.id.delete_iv_right);
-        deleteLv=findViewById(R.id.delete_lv);
-        mDatas=new ArrayList<>();
-        deleteCitys=new ArrayList<>();
-        adapter=new DeleteCityAdapter(this,mDatas,deleteCitys);
-        helper=DBManager.getInstance(this);
-        db=helper.getWritableDatabase();
-        errorIv.setOnClickListener(this);
-        rightIv.setOnClickListener(this);
+        ivBack = findViewById(R.id.delete_iv_back);
+        deleteLv = findViewById(R.id.delete_lv);
+        mDatas = new ArrayList<>();
+        deleteCitys = new ArrayList<>();
+        adapter = new DeleteCityAdapter(this, mDatas, deleteCitys);
+        helper = DBManager.getInstance(this);
+        db = helper.getWritableDatabase();
+        ivBack.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.delete_iv_error:
+        switch (v.getId()) {
+           /* case R.id.delete_iv_error:
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("提示信息").setMessage("您确定要放弃修改吗？")
 
@@ -73,20 +70,20 @@ private List<String> mDatas;//listView的数据源
                         })
                         .setNegativeButton("取消",null);
                 builder.create().show();
-                break;
-            case R.id.delete_iv_right:
-                int count=0;
-                for(int i=0;i<deleteCitys.size();i++){
-                    String deleteCity = deleteCitys.get(i);
-                    count=DBManager.deleteCityByName(db,Constanse.DB_TABAL_NAME,deleteCity);
-
-                }
-                if(count>0){
-                    Toast.makeText(this,"删除城市成功!",Toast.LENGTH_LONG).show();
-               finish();
-                }else{
-                    Toast.makeText(this,"删除城市失败!",Toast.LENGTH_LONG).show();
-                }
+                break;*/
+            case R.id.delete_iv_back:
+                finish();
+//                int count=0;
+//                for(int i=0;i<deleteCitys.size();i++){
+//                    String deleteCity = deleteCitys.get(i);
+//                    count=DBManager.deleteCityByName(db,Constanse.DB_TABAL_NAME,deleteCity);
+//                }
+//                if(count>0){
+//                    Toast.makeText(this,"删除城市成功!",Toast.LENGTH_LONG).show();
+//                }else {
+//                    Toast.makeText(this,"删除城市失败!",Toast.LENGTH_LONG).show();
+//                }
+//                finish();
                 break;
         }
     }

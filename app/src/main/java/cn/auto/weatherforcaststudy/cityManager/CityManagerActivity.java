@@ -20,12 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CityManagerActivity extends AppCompatActivity implements View.OnClickListener{
-private ImageView addIv,deleteIv,backIc;
+private ImageView ivAdd, ivDelete, ivBack;
 private ListView cityLv;
 private List<DatabaseBean> mDatas;
 private CityManagerAdapter cityManagerAdapter;
-    private SQLiteOpenHelper dbHelper;
-    private SQLiteDatabase db;
+private SQLiteOpenHelper dbHelper;
+private SQLiteDatabase db;
 
     @Override
     protected void onDestroy() {
@@ -55,16 +55,16 @@ private CityManagerAdapter cityManagerAdapter;
     }
 
     private void initViews() {
-        addIv=findViewById(R.id.city_iv_add);
-        deleteIv=findViewById(R.id.city_iv_edit);
-        backIc=findViewById(R.id.city_iv_back);
+        ivAdd =findViewById(R.id.city_iv_add);
+        ivDelete =findViewById(R.id.city_iv_edit);
+        ivBack =findViewById(R.id.city_iv_back);
         cityLv=findViewById(R.id.city_lv);
         dbHelper=DBManager.getInstance(this);
         db=dbHelper.getWritableDatabase();
         mDatas=new ArrayList<>();
-        addIv.setOnClickListener(this);
-        deleteIv.setOnClickListener(this);
-        backIc.setOnClickListener(this);
+        ivAdd.setOnClickListener(this);
+        ivDelete.setOnClickListener(this);
+        ivBack.setOnClickListener(this);
 
     }
 
