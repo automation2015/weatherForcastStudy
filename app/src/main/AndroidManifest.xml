@@ -12,17 +12,20 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".cityManager.CityManagerActivity" />
+        <activity android:name=".cityManager.SearchCityActivity" />
+        <activity android:name=".cityManager.DeleteCityActivity" />
+        <activity android:name=".MoreActivity" />
+        <activity android:name="todayinhistory.atys.HisMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".cityManager.CityManagerActivity" />
-        <activity android:name=".cityManager.SearchCityActivity" />
-        <activity android:name=".cityManager.DeleteCityActivity" />
-        <activity android:name=".MoreActivity"></activity>
+        <activity android:name="todayinhistory.atys.HistoryDescActivity" />
+        <activity android:name="todayinhistory.atys.HisMoreActivity"></activity>
     </application>
 
 </manifest>

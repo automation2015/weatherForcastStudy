@@ -119,12 +119,14 @@ public class MoreActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
+    /**
+     * 初始化主布局中的控件
+     */
     private void initViews() {
         tvBg = findViewById(R.id.more_tv_exchange);
         tvCache = findViewById(R.id.more_tv_cache);
         tvShare = findViewById(R.id.more_tv_share);
         tvVersion = findViewById(R.id.more_tv_version);
-        tvDefCity = findViewById(R.id.more_tv_def_city);
         rgExBg = findViewById(R.id.more_rg);
         ivBack = findViewById(R.id.more_iv_back);
         helper = DBManager.getInstance(this);

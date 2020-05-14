@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:orientation="vertical"
+    android:background="@color/hisMainBg">
+<RelativeLayout
+    android:id="@+id/his_more_rl"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <ImageView
+        android:id="@+id/his_more_iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:src="@mipmap/his_icon_back"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="历史上的今天"
+        android:layout_centerInParent="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+    <View
+        style="@style/his_main_lineStyle"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/his_more_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        ></ListView>
+        <TextView
+            android:id="@+id/his_more_tv_none"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无数据"
+            android:textStyle="bold"
+            android:textSize="40sp"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

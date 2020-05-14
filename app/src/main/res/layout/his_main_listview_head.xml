@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/hisMainBg"
+    >
+        <TextView
+            android:id="@+id/his_main_header_tv_solar"
+            style="@style/his_main_textStyle1"
+            android:text=""/>
+        <TextView
+            android:id="@+id/his_main_header_tv_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text=""
+            android:textColor="@color/hisFireRed"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/his_main_header_tv_week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text=""
+            android:textColor="@color/hisFireRed"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/his_main_header_tv_lunar"
+            style="@style/his_main_textStyle1"
+            android:text=""/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/his_main_headbg"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/his_main_header_tv_baiji"
+                style="@style/his_main_textStyle2"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/his_main_header_tv_wuxing"
+                style="@style/his_main_textStyle2"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/his_main_header_tv_chongsha"
+                style="@style/his_main_textStyle2"
+                android:text=""/>
+            <View
+                style="@style/his_main_lineStyle"
+                />
+            <TextView
+                android:id="@+id/his_main_header_tv_jishen"
+                style="@style/his_main_textStyle2"
+                android:layout_marginTop="10dp"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/his_main_header_tv_xiongshen"
+                style="@style/his_main_textStyle2"
+                android:text=""/>
+            <View
+                style="@style/his_main_lineStyle"
+                />
+            <TextView
+                android:id="@+id/his_main_header_tv_ji"
+                style="@style/his_main_textStyle2"
+                android:layout_marginTop="10dp"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/his_main_header_tv_yi"
+                style="@style/his_main_textStyle2"
+                android:text=""
+                android:layout_marginBottom="10dp"/>
+
+        </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="历史上的这一天:"/>
+    </LinearLayout>
+
