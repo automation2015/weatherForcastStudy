@@ -1,4 +1,4 @@
-package todayinhistory.atys.utils;
+package cn.auto.todayInHistory.utils;
 
 public class Constant {
     public static  String getHistoryUrl(String version,int month,int day){

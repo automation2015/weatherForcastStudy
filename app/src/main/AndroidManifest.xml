@@ -17,15 +17,17 @@
         <activity android:name=".cityManager.SearchCityActivity" />
         <activity android:name=".cityManager.DeleteCityActivity" />
         <activity android:name=".MoreActivity" />
-        <activity android:name="todayinhistory.atys.HisMainActivity">
+        <activity android:name="cn.auto.todayInHistory.HisMainActivity">
+
+        </activity>
+        <activity android:name="cn.auto.todayInHistory.HistoryDescActivity" />
+        <activity android:name="cn.auto.todayInHistory.HisMoreActivity" />
+        <activity android:name="cn.auto.news.NewsMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="todayinhistory.atys.HistoryDescActivity" />
-        <activity android:name="todayinhistory.atys.HisMoreActivity"></activity>
     </application>
 
 </manifest>

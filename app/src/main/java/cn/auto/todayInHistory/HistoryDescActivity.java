@@ -1,10 +1,9 @@
-package todayinhistory.atys;
+package cn.auto.todayInHistory;
 
-import androidx.appcompat.app.AppCompatActivity;
 import cn.auto.weatherforcaststudy.R;
 import cn.auto.weatherforcaststudy.base.BaseActivity;
-import todayinhistory.atys.beans.HistoryDescBean;
-import todayinhistory.atys.utils.Constant;
+import cn.auto.todayInHistory.beans.HistoryDescBean;
+import cn.auto.todayInHistory.utils.Constant;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;

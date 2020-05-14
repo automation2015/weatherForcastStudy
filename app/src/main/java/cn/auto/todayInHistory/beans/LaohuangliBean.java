@@ -1,4 +1,4 @@
-package todayinhistory.atys.beans;
+package cn.auto.todayInHistory.beans;
 
 public class LaohuangliBean {
 

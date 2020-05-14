@@ -1,4 +1,4 @@
-package todayinhistory.atys.adapters;
+package cn.auto.todayInHistory.adapters;
 
 import android.content.Context;
 import android.text.TextUtils;
@@ -15,7 +15,7 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 import cn.auto.weatherforcaststudy.R;
-import todayinhistory.atys.beans.HistoryBean;
+import cn.auto.todayInHistory.beans.HistoryBean;
 
 public class HistoryAdapter extends BaseAdapter {
     private Context context;
